@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIL Number Sense</title>
+</head>
+
+<body>
+    <div id="explaniation">
+
+        <h1>Multiplying by 11 Tricks</h1><hr>
+            <h1>2 Digit Number Multiplied by 11</h1>
+            The ones digit ALWAYS stays the same. <br>
+            Add the 2 numbers together, and let the 1's digit of that number become the 10's digit of the result. <br>
+            The 100's digit will remain the same, UNLESS the addition from the previous step resulted in a carry.  <br>
+        <br>
+        <h1>3 Digit Number Multiplied by 11</h1>
+            The ones digit ALWAYS stays the same. <br>
+            placeholder <br>
+            placeholder <br>
+    </div>
+
+    <div id="practice">
+    
+        <h2> PRACTICE PROBLEMS </h2>
+       
+
+            <input id="display" readonly>
+            <button id="generate" onclick="generateProblem(mTricks.trick2by11())"> Generate a new problem (## * 11)</button> <!--NOT WORKING BTW. Somehow working even though I didn't change anything??-->
+            <button id="generate" onclick="generateProblem(mTricks.trick3by11())"> Generate a new problem ( ### * 11)</button> 
+                <br>
+            <input id="answer" placeholder="Input Anser"></input>
+            <button id="result" onclick="reveal()"> Reveal Answer</button>
+
+
+    <div id="practice">
+
+    <script src="../index.js"></script>
+    
+    </div>
+    
+</body>
+</html>
