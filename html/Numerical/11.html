@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UIL Number Sense</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
+    <h1><a href="../../index.html">UIL Number Sense</a> - Multiplying by 11 Tricks</h1><hr>
+
     <div id="explaniation">
 
-        <h1>Multiplying by 11 Tricks</h1><hr>
             <h1>2 Digit Number Multiplied by 11</h1>
             The ones digit ALWAYS stays the same. <br>
             Add the 2 numbers together, and let the 1's digit of that number become the 10's digit of the result. <br>
@@ -21,22 +23,27 @@
             placeholder <br>
     </div>
 
+    <div id="example">
+       <h1>Examples</h1> 
+    </div>
+
     <div id="practice">
     
-        <h2> PRACTICE PROBLEMS </h2>
+        <h1> PRACTICE PROBLEMS </h1>
        
 
-            <input id="display" readonly>
-            <button id="generate" onclick="generateProblem(mTricks.trick2by11())"> Generate a new problem (## * 11)</button> <!--NOT WORKING BTW. Somehow working even though I didn't change anything??-->
-            <button id="generate" onclick="generateProblem(mTricks.trick3by11())"> Generate a new problem ( ### * 11)</button> 
-                <br>
-            <input id="answer" placeholder="Input Anser"></input>
+            <input id="display" placeholder="Generate a Problem" readonly><br>
+            <input id="answer" placeholder="Input Anser"></input><br>
+
             <button id="result" onclick="reveal()"> Reveal Answer</button>
+            <button id="generate" onclick="generateProblem(mTricks.trick2by11())"> Generate a new problem (## * 11)</button> 
+            <button id="generate" onclick="generateProblem(mTricks.trick3by11())"> Generate a new problem ( ### * 11)</button> 
+            
 
 
-    <div id="practice">
+    </div>
 
-    <script src="../index.js"></script>
+    <script src="../../index.js"></script>
     
     </div>
     

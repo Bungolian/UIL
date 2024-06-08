@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIL Number Sense</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div id="explaniation">
+        <h1><a href="../../index.html">UIL Number Sense</a> - Squares to Memorize</h1><hr>
+            This part is pretty straightfoward. In the case that you can't memorize them straight away, you can always derive them. However, it is reccomended to already have
+            the squares from 1-30 already stored in your memory, and only derive them as a last resort. 
+            <br>
+    </div>
+
+    <div id="example">
+        <ol>
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+        </ol>
+    </div>
+
+    <div id="practice">
+    
+        <h1> PRACTICE PROBLEMS </h1>
+       
+            <input id="display" placeholder="Generate a Problem"  readonly><br>
+            <input id="answer" placeholder="Input Anser"></input><br>
+
+            <button id="result" onclick="reveal()"> Reveal Answer</button>
+            <button id="generate" onclick="generateProblem(memTricks.squaresBasic())"> Generate a new problem</button> <!--need a square function. pretty easyy just get it done. -->
+
+
+    </div>
+    <script src="../../index.js"></script>
+</body>
+</html>

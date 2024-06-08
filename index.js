@@ -6,7 +6,7 @@ let result = "Problem does not exist";
 let inputProblem;
 
 class multiplicationTricks{
-
+//D for deriving the trick for examples. 
     foiling2x2(){
         x = Math.floor(Math.random() * 99);
         y = Math.floor(Math.random() * 99);
@@ -20,6 +20,9 @@ class multiplicationTricks{
         result = x * y;
         return `${x} * ${y}`; 
     }
+    Dtrick2by11(){
+        trick2by11()
+    }
 
     trick3by11 (){
         x = Math.floor(Math.random() * 999);
@@ -28,8 +31,18 @@ class multiplicationTricks{
         return `${x} * ${y}`; 
     }
 }
+
+class memorize {
+    squaresBasic(){
+        x = Math.floor(Math.random() * 30);
+        result = x * x;
+        return `${x}^2`;
+    }
+}
+
 //ADDING OBJECTS
 let mTricks = new multiplicationTricks;
+let memTricks = new memorize;
 
 // WEBPAGE FUNCTIONALITY
 const display = document.getElementById("display");
@@ -43,6 +56,7 @@ function clearDisplay(){
 }
 function generateProblem(inputProblem){
     display.value = inputProblem;
+    //display.value = "working";
 }
 function reveal(){
     answerDisplay.value = result;
