@@ -25,6 +25,11 @@
 
     <div id="example">
        <h1>Examples</h1> 
+
+       <input id="exampleDisplay" placeholder="Example" readonly>
+       <button onclick="generateExample(mTricks.trick2by11())">New Example</button>
+       <button onclick="mTricks.Dtrick2by11(equation)">Each Character</button>
+       
     </div>
 
     <div id="practice">
@@ -36,16 +41,13 @@
             <input id="answer" placeholder="Input Anser"></input><br>
 
             <button id="result" onclick="reveal()"> Reveal Answer</button>
-            <button id="generate" onclick="generateProblem(mTricks.trick2by11())"> Generate a new problem (## * 11)</button> 
-            <button id="generate" onclick="generateProblem(mTricks.trick3by11())"> Generate a new problem ( ### * 11)</button> 
-            
-
+            <button id="generate" onclick="generateProblem(mTricks.trick2by11())"> New problem (## * 11)</button>
+            <button id="check" onclick="checkAnswer(answer)"> Check Answer</button> 
+            <button id="generate" onclick="generateProblem(mTricks.trick3by11())"> New problem ( ### * 11)</button> 
+           
 
     </div>
 
     <script src="../../index.js"></script>
-    
-    </div>
-    
 </body>
 </html>
