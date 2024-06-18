@@ -11,14 +11,39 @@ input{
 button{
     border-style: solid;
 }
-    
 
 /* SPECIFIC PROPERTIES  */
 
+/* EXAMPLES */
+#example{
+    border-style: groove;
+    text-align: center;
+}
+#example h1{
+    font-size: 200%
+}
+#example #exampleDisplay{
+    width: 85%;
+    height: 100px;
+    font-size: 200%;
+    margin-bottom: 5px;
+}
+#example #stepDisplay{
+    width: 85%;
+    height: 100px;
+    font-size: 200%;
+    margin-bottom: 5px;
+}
+#example button{
+    width: 28.333%;
+    height: 100px;
+    font-size: 200%;
+    justify-content: center;
+}
+/* PRACTICE */
 #practice{
     border-style: groove;
     text-align: center;
-
 }
 #practice h1{
     font-size: 200%
@@ -42,5 +67,4 @@ button{
     height: 100px;
     font-size: 200%;
     justify-content: center;
-
 }

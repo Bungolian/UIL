@@ -1,11 +1,14 @@
+;
+
 // BACKGROUND FUNCTIONS 
 let x;
 let y;
 let equation;
 let answer;
 let result = "Problem does not exist";
-let inputProblem;
-let str = "Placeholder String";
+//let inputProblem;
+
+let char = []; 
 
 class multiplicationTricks{
 //D for deriving the trick for examples. 
@@ -22,11 +25,7 @@ class multiplicationTricks{
         y = 11;
         result = x * y;
         equation = `${x} * ${y}`;
-        return equation; 
-    }
-    Dtrick2by11(equation){
-        examples.characters(equation);
-        
+        return equation;
     }
 
     trick3by11 (){
@@ -46,32 +45,39 @@ class memorize {
         return equation;
     }
 }
+
+/*
 class exampleVisuals{
-/*  TO DO
-Get each token in the variable. - several ways... I think about a lexer and parser...
-Create an array to store each character
-Come up with individual functions to represent dirivation. 
-Use array memories to print it out. 
-*/
-    characters(equation) { // A way of getting each character. 
-        for (let i = 0; i < equation.length; i++) {
-            const char = equation.charAt(i);
-            console.log(`Character at index ${i}: ${char}`);
-        }
+ 
+    Dtrick2by11(equation){ // abMMMyy  - Bugs when it is a one digit number...
+        ex2by11.readChar(equation);
+
+        ex2by11.step1();
+
+        console.log(char[0]);
+        console.log(char[1]);
+
+        console.log(char[5]);
+        console.log(char[6]);
     }
 }
+*/
 
 //ADDING OBJECTS
 let mTricks = new multiplicationTricks;
 let memTricks = new memorize;
-let examples = new exampleVisuals;
+//let examples = new exampleVisuals;
+
 
 // WEBPAGE FUNCTIONALITY
 const display = document.getElementById("display");
 const exampleDisplay = document.getElementById("exampleDisplay");
+const stepDisplay = document.getElementById("stepDisplay");
+const explainDisplay = document.getElementById("explainDisplay");
 let answerDisplay = document.getElementById("answer");
 let check = document.getElementById("check");
 
+let nextStep = document.getElementById("nextStep"); // i feel like this should be at top for the examples class...
 
 function clearDisplay(){
     display.value = "";
@@ -81,9 +87,6 @@ function generateProblem(inputProblem){
 
     answerDisplay.value = ""; 
     answerDisplay.style.borderColor = "";
-}
-function generateExample(inputProblem){
-    exampleDisplay.value = inputProblem;
 }
 function reveal(){
     answerDisplay.value = result;   
@@ -100,3 +103,4 @@ function checkAnswer(input, inputProblem){
             answerDisplay.style.borderColor = "#ff0000";
         }
 }
+

@@ -23,13 +23,20 @@
             placeholder <br>
     </div>
 
+    
+
     <div id="example">
        <h1>Examples</h1> 
 
-       <input id="exampleDisplay" placeholder="Example" readonly>
        <button onclick="generateExample(mTricks.trick2by11())">New Example</button>
-       <button onclick="mTricks.Dtrick2by11(equation)">Each Character</button>
+       <button id="nextStep" onclick="ex2by11.explain(equation)">Show Step 1</button>
+      
        
+       <br>
+       <input id="exampleDisplay" placeholder="Example" readonly><br>
+       <input id="stepDisplay" placeholder="Steps" readonly><br>
+            <div id="explainDisplay"> Explanation </div>
+
     </div>
 
     <div id="practice">
@@ -47,7 +54,8 @@
            
 
     </div>
-
-    <script src="../../index.js"></script>
+    <script src="../../examples.js"></script>
+    <script src="../../main.js"></script>
+    
 </body>
 </html>
