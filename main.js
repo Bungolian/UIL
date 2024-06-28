@@ -6,7 +6,6 @@ let y;
 let equation;
 let answer;
 let result = "Problem does not exist";
-//let inputProblem;
 
 let char = []; 
 
@@ -46,28 +45,9 @@ class memorize {
     }
 }
 
-/*
-class exampleVisuals{
- 
-    Dtrick2by11(equation){ // abMMMyy  - Bugs when it is a one digit number...
-        ex2by11.readChar(equation);
-
-        ex2by11.step1();
-
-        console.log(char[0]);
-        console.log(char[1]);
-
-        console.log(char[5]);
-        console.log(char[6]);
-    }
-}
-*/
-
 //ADDING OBJECTS
 let mTricks = new multiplicationTricks;
 let memTricks = new memorize;
-//let examples = new exampleVisuals;
-
 
 // WEBPAGE FUNCTIONALITY
 const display = document.getElementById("display");
@@ -76,8 +56,7 @@ const stepDisplay = document.getElementById("stepDisplay");
 const explainDisplay = document.getElementById("explainDisplay");
 let answerDisplay = document.getElementById("answer");
 let check = document.getElementById("check");
-
-let nextStep = document.getElementById("nextStep"); // i feel like this should be at top for the examples class...
+let nextStep = document.getElementById("nextStep");
 
 function clearDisplay(){
     display.value = "";
