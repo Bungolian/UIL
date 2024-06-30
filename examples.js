@@ -13,13 +13,11 @@ class e2by11{   // abMMMyy . 01 * 56
 constructor(steps){
     this.steps = new Array(4); // doesnt really do anthing.
 }
-
     initialize(){ 
         nextStep.addEventListener("click", event => {
             this.addStep();
         });
     }
-        
     readChar(equation) { 
     char = []; 
     for (let i = 0; i < equation.length; i++) {
