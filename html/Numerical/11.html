@@ -40,19 +40,22 @@
 
     <div id="practice">
     
-        <h1> PRACTICE PROBLEMS </h1>
+        <h1>Practice Problems</h1>
        
+            <div id="inputs">
+            <input id="display" placeholder="Generate a Problem" readonly>
+            <input id="answer" placeholder="Input Anser"></input>
+            </div>
 
-            <input id="display" placeholder="Generate a Problem" readonly><br>
-            <input id="answer" placeholder="Input Anser"></input><br>
-
+            <div id="buttons">
             <button id="result" onclick="reveal()"> Reveal Answer</button>
             <button id="generate" onclick="generateProblem(mTricks.trick2by11())"> New problem (## * 11)</button>
             <button id="check" onclick="checkAnswer(answer)"> Check Answer</button> 
-            <button id="generate" onclick="generateProblem(mTricks.trick3by11())"> New problem ( ### * 11)</button> 
-           
+            </div>
+            <button id="generate" onclick="generateProblem(mTricks.trick3by11())"> New problem ( ### * 11)</button> <!-- exception because there are 2 tricks in this file-->
 
     </div>
+
     <script src="../../examples.js"></script>
     <script src="../../main.js"></script>
     <script> 

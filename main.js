@@ -1,5 +1,3 @@
-;
-
 // BACKGROUND FUNCTIONS 
 let x;
 let y;
