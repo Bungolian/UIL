@@ -12,12 +12,19 @@
     <h1><a href="../../index.html">UIL Number Sense</a> - 25's Trick</h1><hr>  <!-- Trick name -->
 
     <div id="explaniation">
+        "The trick to multiplying by 25 is to think of it as 100/4. <br>
+        So the strategy is to take what ever you are multiplying with, divide it by 4 then move the decimal over to the right two places"<br>
+        Dividing is similar, but takes the opposite steps. Think of 4/100.<br>
+        So multiply by 4, and move the decimal to the left 2 places.<br>
+
+        To remember: use the opposite sign. If your multiplying obviously the answer will get bigger, hence going to the right. Dividing will get smaller, so the decimal would move to the left.
+
     </div>
 
     <div id="example">
        <h1>Examples</h1> 
 
-       <button onclick="generateExample()">New Example</button>
+       <button onclick="generateExample(mTricks.trick25())">New Example</button>
        <button id="nextStep">Show Step 1</button>
       
        
@@ -37,7 +44,7 @@
             <input id="answer" placeholder="Input Anser"></input><br>
 
             <button id="result" onclick="reveal()"> Reveal Answer</button>
-            <button id="generate" onclick="generateProblem()"> New problem</button>
+            <button id="generate" onclick="generateProblem(mTricks.trick25())"> New problem</button>
             <button id="check" onclick="checkAnswer(answer)"> Check Answer</button> 
             
            

@@ -123,19 +123,18 @@ class eFoiling2x2{ // abIIIcd . 01 *  56
     }
     step1(equation){
         readChar(equation);
-        oneD = Number(ones) * Number(onesB);
+        oneD = `${Number(ones) * Number(onesB)}`;
         
         if(oneD >= 10){ // check for a carry
             checkCarry(oneD);
             oneD = carryD;
-            //console.log(carryAdd);
         }
 
         stepDisplay.value = oneD;
         explainDisplay.textContent = "Step 1 - Multiply the ones digits of both variables. Keep the ones digit of that answer and Carry if needed.";
     }
     step2(){// ten,one * tenB,oneB
-        tenD = Number(ones) * Number(tensB) + Number(tens) * Number(onesB);
+        tenD = `${Number(ones) * Number(tensB) + Number(tens) * Number(onesB)}`;
 
         if (Carry == true){ // check for previous carry
             tenD = `${Number(tenD) + Number(carryAdd)}`;
@@ -150,7 +149,7 @@ class eFoiling2x2{ // abIIIcd . 01 *  56
         explainDisplay.textContent = "Step 2 - Take the sum of the outer digits multiplied together and the inner digits multiplied together. (Outer-Inner = (ad + bc)) Keep the ones digit of that answer and Carry / Add previous Carries if needed.";  
     }
     step3(){
-        hundredD = Number(tens) * Number(tensB);
+        hundredD = `${Number(tens) * Number(tensB)}`;
         if (Carry == true){ // check for previous carry
             hundredD = `${Number(hundredD) + Number(carryAdd)}`;
             Carry = false;

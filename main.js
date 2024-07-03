@@ -32,6 +32,22 @@ class multiplicationTricks{
         equation = `${x} * ${y}`;
         return equation; 
     }
+
+    //for these tricks I need to create a new readChar() for 3 * 2 formulas. HOWEVER, It will not always be this way. Maybe seperate by using their .length into switch case.
+    trick25 (){ // need randomizer for y. or set y to multiple values and pick one randomly.
+        x = Math.floor(Math.random() * 450);
+        y = 25;
+        result = x * y;
+        equation = `${x} * ${y}`;
+        return equation;
+    }
+    trick75(){ // need randomizer for y. or set y to multiple values and pick one randomly.
+        x = Math.floor(Math.random() * 450);
+        y = 75;
+        result = x * y;
+        equation = `${x} * ${y}`;
+        return equation;
+    }
 }
 
 class memorize {
