@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1><a href="../../index.html">UIL Number Sense</a> - Practice Problems</h1><hr>
+    <h1><a href="../index.html">UIL Number Sense</a> - Practice Problems</h1><hr>
 
     <div id="practice">
         <h1>Practice Problems</h1> <br>
@@ -20,7 +20,7 @@
             <ul class="problemSelections">
                 <li><label for="2x11">2 Digit Multiplied By 11</label><input id="2x11" type="checkbox"></li>
                 <li><label for="3x11">3 Digit Number Multiplied by 11</label><input id="3x11" type="checkbox"></li>
-                <li><label for="foiling2x2">3 Digit Number Multiplied by 11</label><input id="foiling2x2" type="checkbox"></li>
+                <li><label for="foiling2x2">Foiling 2 Digit Numbers by 2 Digit Numbers</label><input id="foiling2x2" type="checkbox"></li>
             </ul>
 
        </div>
@@ -31,25 +31,16 @@
 
             <div id="buttons">
             <button id="result" onclick="reveal()"> Reveal Answer</button>
-            <button id="generate" onclick ="submit()"> New problem</button> <!-- Need to turn this into a dropdown box.-->
+            <button id="generate" onclick ="submit()"> New problem</button> <!-- submit() or generateProblem2()-->
             <button id="check" onclick="checkAnswer(answer)"> Check Answer</button> 
             </div>
 
     </div>
 
-    <!-- <div id="problemSelections">
-        <label for="2x11">2 Digit Multiplied By 11</label><input id="2x11" type="checkbox"> <br>
-        <label for="3x11">3 Digit Number Multiplied by 11</label><input id="3x11" type="checkbox"><br>
-        <label for="foiling2x2">3 Digit Number Multiplied by 11</label><input id="foiling2x2" type="checkbox"><br>
-        <button id="mess" onclick="submit()">Submit</button>
-    </div> -->
-
     <script src="../examples.js"></script>
     <script src="../main.js"></script>
     <script src="../practice.js"></script>
-    <script> 
-    initialize();
-    </script>
+
     
 </body>
 </html>
