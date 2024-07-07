@@ -54,6 +54,37 @@ button{
     border-style: groove;
     text-align: center;
 }
+
+/* HEADING DROPDOWN BOX */
+#practice #heading{
+    margin:0%;
+    padding:0%;
+    width: 100%;
+}
+#practice #heading h1{
+    display:block;
+    margin:0%;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+#practice #heading input{  /* to put the checkboxes back to normal*/
+    width: auto;
+    height: auto;
+}
+#practice .problemSelections{
+    width: 100%;
+    margin:0;
+    padding:0;
+    display:none;
+}
+#practice #heading li{
+    display:block;
+}
+#heading:hover ul.problemSelections{
+    display:block;
+}
+/* HEADING DROPDOWN BOX */
+
 #practice #inputs{
     display: flex;
     flex-direction: column;
