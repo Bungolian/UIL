@@ -72,27 +72,32 @@ let answerDisplay = document.getElementById("answer");
 let check = document.getElementById("check");
 let nextStep = document.getElementById("nextStep");
 
-function clearDisplay(){
-    display.value = "";
-}
 function generateProblem(inputProblem){
+    if(tricks.length >> 0){
+        console.log(tricks);
+        inputProblem = eval(randomTrick);
+    }
+
     display.value = inputProblem;
+    tricks.length = 0;
 
     answerDisplay.value = ""; 
     answerDisplay.style.borderColor = "";
 }
-function reveal(){
+function reveal(Result){
+    if(tricks.length >> 0){
+        eval(randomTrick);
+        Result = result;
+    }
     answerDisplay.value = result;   
 }
 function checkAnswer(input, inputProblem){
         answer = answerDisplay.value;
         if (answer == result){
-           console.log("Answer is correct");
            answerDisplay.style.borderColor = "#57d945";
            
         }
         else{
-            console.log("Incorrect");	
             answerDisplay.style.borderColor = "#ff0000";
         }
 }

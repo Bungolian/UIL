@@ -32,13 +32,14 @@
         <input id="display" placeholder="Generate a Problem" readonly><br>
         <input id="answer" placeholder="Input Anser"></input><br>
 
-        <button id="result" onclick="reveal()"> Reveal Answer</button>
+        <button id="result" onclick="reveal(result)"> Reveal Answer</button>
         <button id="generate" onclick="generateProblem(mTricks.foiling2x2())"> New problem </button>
         <button id="check" onclick="checkAnswer(answer)"> Check Answer</button>  
     </div>
     
     <script src="../../examples.js"></script>
     <script src="../../main.js"></script>
+    <script src="../../practice.js"></script>
     <script>
         exFoiling2x2.initialize();
     </script>
