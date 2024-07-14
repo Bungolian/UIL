@@ -1,15 +1,18 @@
 // BACKGROUND FUNCTIONS 
+let trickName = "Problem Type";
 let x;
 let y;
 let equation;
 let answer;
 let result = "Problem does not exist";
 
+
 let char = []; 
 
 class multiplicationTricks{
 //D for deriving the trick for examples. 
     foiling2x2(){
+        trickName = "Foiling 2 Digit Numbers";
         x = Math.floor(Math.random() * 99);
         y = Math.floor(Math.random() * 99);
         result = x * y;
@@ -18,6 +21,7 @@ class multiplicationTricks{
     }   
 
     trick2by11(){
+        trickName = "11's Trick with 2 Digit Numbers";
         x = Math.floor(Math.random() * 99);
         y = 11;
         result = x * y;
@@ -26,6 +30,7 @@ class multiplicationTricks{
     }
 
     trick3by11 (){
+        trickName = "11's Trick with 3 Digit Numbers";
         x = Math.floor(Math.random() * 999);
         y = 11;
         result = x * y;
@@ -34,14 +39,31 @@ class multiplicationTricks{
     }
 
     //for these tricks I need to create a new readChar() for 3 * 2 formulas. HOWEVER, It will not always be this way. Maybe seperate by using their .length into switch case.
-    trick25 (){ // need randomizer for y. or set y to multiple values and pick one randomly.
-        x = Math.floor(Math.random() * 450);
+    trick25Lv1 (){ 
+        trickName = "25's Trick - Level 1";
+        x = Math.floor(Math.random() * 499);
         y = 25;
         result = x * y;
         equation = `${x} * ${y}`;
         return equation;
     }
-    trick75(){ // need randomizer for y. or set y to multiple values and pick one randomly.
+    trick25Lv2 (){ 
+        trickName = "25's Trick - Level 2"; // this trick needs decimals somewhere in here too. Literally Anywhere.
+        x = Math.floor(Math.random() * 499);
+        y = 25;
+        result = x * y;
+        equation = `${x} * ${y}`;
+        return equation;
+    }
+    trick25Lv3 (){ 
+        trickName = "25's Trick - Level 3";
+        x = Math.floor(Math.random() * 1499);
+        y = 25;
+        result = x * y;
+        equation = `${x} * ${y}`;
+        return equation;
+    }
+    trick75(){ 
         x = Math.floor(Math.random() * 450);
         y = 75;
         result = x * y;
@@ -75,11 +97,14 @@ let nextStep = document.getElementById("nextStep");
 function generateProblem(inputProblem){
     if(tricks.length >> 0){
         console.log(tricks);
-        inputProblem = eval(randomTrick);
+        eval(randomTrick);
+        inputProblem = equation;
+        headerDrop.textContent = trickName; // only certain files have header.
+        tricks.length = 0;
     }
-
+    console.log(trickName);
     display.value = inputProblem;
-    tricks.length = 0;
+
 
     answerDisplay.value = ""; 
     answerDisplay.style.borderColor = "";

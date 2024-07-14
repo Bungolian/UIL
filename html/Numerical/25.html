@@ -21,10 +21,10 @@
 
     </div>
 
-    <div id="example">
+    <div id="example"> <!--USE HIGHEST LEVEL FOR EXAMPLES-->
        <h1>Examples</h1> 
 
-       <button onclick="generateExample(mTricks.trick25())">New Example</button>
+       <button onclick="generateExample(mTricks.trick25Lv3())">New Example</button> 
        <button id="nextStep">Show Step 1</button>
       
        
@@ -36,15 +36,24 @@
     </div>
 
     <div id="practice">
-    
         <h1> PRACTICE PROBLEMS </h1>
-       
+    <div id="heading">
+                
+            <h1 id="dropDown">Problem Type</h1>
+        
+        <ul class="problemSelections">
+            <li><label for="25LV1">Level 1 - Up to 499</label><input id="25LV1" type="checkbox"></li>
+            <li><label for="25LV2">Level 2 - Up to 499 and contains decimals</label><input id="25LV2" type="checkbox"></li>
+            <li><label for="25LV3">Level 3 - Up to 1499 and contains decimals</label><input id="25LV3" type="checkbox"></li>
+        </ul>
+
+   </div>
 
             <input id="display" placeholder="Generate a Problem" readonly><br>
             <input id="answer" placeholder="Input Anser"></input><br>
 
             <button id="result" onclick="reveal(result)"> Reveal Answer</button>
-            <button id="generate" onclick="generateProblem(mTricks.trick25())"> New problem</button>
+            <button id="generate" onclick="personalSub(); generateProblem(randomTrick)"> New problem</button>
             <button id="check" onclick="checkAnswer(answer)"> Check Answer</button> 
             
            
@@ -52,8 +61,22 @@
     </div>
     <script src="../../examples.js"></script>
     <script src="../../main.js"></script>
+    <script src="../../practice.js"></script>
     <script> 
         ex25.initialize();
+    
+        function personalSub(){
+            if (check25LV1.checked == true){
+                tricks.push("mTricks.trick25Lv1()");
+            }
+            if (check25LV2.checked == true){
+                tricks.push("mTricks.trick25Lv2()");
+            }
+            if (check25LV3.checked == true){
+                tricks.push("mTricks.trick25Lv3()");
+            }
+            randomTrick = tricks[Math.floor(Math.random() * tricks.length)];
+        }
     </script>
     
 </body>
